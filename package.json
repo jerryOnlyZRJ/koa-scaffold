@@ -9,15 +9,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "co": "^4.6.0",
-    "jest": "^22.3.0",
-    "koa": "^2.5.0",
-    "koa-router": "^7.4.0",
-    "koa-static": "^4.0.2",
-    "koa-swig": "^2.2.1"
+    "jest": "^22.3.0"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "co": "^4.6.0",
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "koa-swig": "^2.2.1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   }
