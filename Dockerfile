@@ -1,7 +1,7 @@
 FROM ranjayzheng/dev
 COPY . /home/ranjay/koa-demo
 WORKDIR /home/ranjay/koa-demo
-RUN source /etc/profile
+ENV PATH /home/ranjay/node/bin:$PATH
 RUN npm install -S
 RUN npm run start:dev
 EXPOSE 3000
