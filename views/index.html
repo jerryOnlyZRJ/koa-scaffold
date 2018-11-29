@@ -2,4 +2,15 @@
 
 {% block title %} Welcome {{ name }} {% endblock%}
 
-{% block content %} <p> username: {{ name }}</p><p> Welcome: {{ data }} </p> {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="styles/index.css">
+{% endblock %}
+
+{% block content %}
+<p> username: {{ name }}</p>
+<p> Welcome: {{ data }} </p>
+{% endblock %}
+
+{% block scripts %}
+<script src="scripts/index.js"></script>
+{% endblock %}
