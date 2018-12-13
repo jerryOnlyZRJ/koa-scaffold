@@ -1,11 +1,11 @@
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
-const path = require('path')
 const staticResource = require('koa-static')
 const router = require('./routers/index')
 const render = require('koa-swig')
 const co = require('co')
 const errorHandler = require('./middlewares/errorhandler')
+const config = require('./config')
 
 const app = new Koa()
 app.use(bodyParser())
@@ -14,12 +14,12 @@ app.use(bodyParser())
 errorHandler.error(app)
 
 // 配置静态资源
-app.use(staticResource(path.join(__dirname, 'public')))
+app.use(staticResource(config.staticResPath))
 
 // 配置模版引擎
 app.context.render = co.wrap(
   render({
-    root: path.join(__dirname, 'views'),
+    root: config.viewPath,
     autoescape: true,
     cache: 'memory', // disable, set to false
     ext: 'html',
@@ -29,8 +29,8 @@ app.context.render = co.wrap(
 
 app.use(router.routes(), router.allowedMethods())
 
-app.listen(3000, () => {
-  console.log('website is starting at port 3000')
+app.listen(config.port, () => {
+  console.log(`website is starting at port ${config.port}`)
 })
 
 module.exports = app
