@@ -1,6 +1,6 @@
 /**
  * @description 容错机制中间件
- * @author Jerry
+ * @author Ranjay
  */
 const log4js = require('./log4js.config.js')
 const logger = log4js.getLogger('mix')

@@ -1,3 +1,7 @@
+/**
+ * @description node应用入口文件
+ * @author Ranjay
+ */
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
 const staticResource = require('koa-static')
