@@ -4,10 +4,10 @@
   "description": "It's a node.js project scaffold based on koa2.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:unit",
+    "test": "scripty",
     "test:unit": "scripty",
     "test:e2e": "scripty",
-    "start": "pm2 start pm2.json",
+    "start": "scripty",
     "start:dev": "scripty"
   },
   "husky": {

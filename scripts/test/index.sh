@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-node tests/e2e.js
+npm run test:unit
